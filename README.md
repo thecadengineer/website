@@ -1,28 +1,17 @@
-# CAD Engineer — interactive 3D hero website
+# CAD Engineer website
 
-A static, responsive website for GitHub Pages. The 3D hero is rendered in the browser with Three.js and can be rotated, zoomed and switched between assembled and exploded views.
+## Publish on GitHub Pages
+1. Extract this ZIP.
+2. Upload `index.html`, `robots.txt`, and `sitemap.xml` to the root of your public GitHub repository.
+3. In Settings → Pages, select Deploy from a branch, `main`, and `/ (root)`.
+4. Configure `cadengineer.co.uk` as the custom domain in GitHub Pages and add the DNS records GitHub specifies at your domain registrar.
+5. Enable Enforce HTTPS when available.
 
-## Before publishing
-1. Open `index.html`.
-2. Find `const CONTACT_EMAIL='replace-with-your-email@example.com';`
-3. Replace the placeholder with the email address that should receive enquiries.
-4. Review the service descriptions and make sure they match the services and delivery capacity you actually offer.
-5. Replace the illustrative 3D machine with a representative model of your own work when available.
+## Interactive model
+The turbine is a procedural Three.js model inspired by the supplied reference image. Visitors can orbit, zoom, pause rotation and toggle an exploded arrangement. It is a visual concept model, not a dimensionally accurate or manufacturing-validated turbine CAD model. Three.js is loaded from jsDelivr, so the interactive model requires an internet connection and WebGL support.
 
-## Publish free with GitHub Pages
-1. Create a GitHub repository, for example `cadengineer-website`.
-2. Upload `index.html` to the repository root.
-3. In the repository, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select `main` and `/ (root)`, then Save.
-6. GitHub will provide a public `https://YOUR-USERNAME.github.io/cadengineer-website/` address.
-7. To use `cadengineer.co.uk`, add the custom domain in the Pages settings and configure the DNS records at your domain provider. Enable HTTPS once DNS has propagated.
+## Contact
+The enquiry form uses `mailto:contact@contact.com`. It opens the visitor's configured email application; it does not send directly from the website. Replace this with a real business inbox if this is not the intended address.
 
-## Google Sites
-Google Sites does not directly host a custom HTML/CSS/JavaScript site as a native website. Host this folder on GitHub Pages, then use **Insert → Embed → By URL** in Google Sites to embed the hosted page. For the full-screen, responsive design and 3D interaction, GitHub Pages is the better option.
-
-## Technical notes
-- Static hosting only; no server or paid hosting required.
-- Three.js and Google Fonts load from public CDNs, so visitors need an internet connection.
-- The enquiry form opens the visitor's email application. It does not store or send form submissions itself.
-- The 3D conveyor-like assembly is a procedural illustrative model, not a dimensionally accurate client deliverable.
+## SEO phrases included
+Mechanical design engineer Yorkshire; CAD design services UK; product design and prototyping UK; 3D CAD modelling services; SolidWorks design services; sketch to prototype UK; engineering drawings service; 3D printing prototype Yorkshire.

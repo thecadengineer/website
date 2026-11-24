@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cadengineer.co.uk/sitemap.xml
