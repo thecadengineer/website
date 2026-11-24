@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <meta name="description" content="Mechanical design, product development, CAD modelling, technical drawings, prototyping and 3D printing for UK businesses.">
+  <title>CAD Engineer | Mechanical Design, Product Development & Prototyping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0d151c;--panel:#14212b;--panel2:#192a35;--ink:#f3f6f8;--muted:#a9b7c1;--line:rgba(220,235,245,.13);--accent:#e2a64b;--accent2:#f3c779;--max:1200px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin:auto}.topbar{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font:800 19px Manrope,sans-serif;letter-spacing:.12em}.brand span{color:var(--accent)}.nav{display:flex;gap:28px;align-items:center;color:#c4cfd6;font-size:13px}.nav a:hover{color:white}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:5px;padding:12px 18px;font-weight:700;font-size:13px;transition:.2s}.nav-cta,.btn-primary{background:var(--accent);color:#17212a}.nav-cta:hover,.btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+    .hero{min-height:680px;display:grid;grid-template-columns: .92fr 1.08fr;align-items:center;gap:18px;padding:66px 0 72px;position:relative}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:25px;height:1px;background:var(--accent)}
+    h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.12;margin:0}h1{font-size:clamp(42px,5vw,67px);letter-spacing:-.055em;margin:22px 0}.hero h1 em{font-style:normal;color:var(--accent)}.lead{font-size:17px;line-height:1.7;color:#b8c5ce;max-width:520px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 25px}.btn-secondary{border:1px solid rgba(235,245,250,.27);color:#edf2f5}.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+    .proof{display:flex;gap:22px;flex-wrap:wrap;color:#aab8c2;font-size:12px}.proof span:before{content:"✓";color:var(--accent);margin-right:8px}
+    .stage{height:510px;position:relative;min-width:0;border:1px solid rgba(220,235,245,.12);border-radius:10px;overflow:hidden;background:radial-gradient(ellipse at 52% 43%,#263946 0%,#172630 43%,#101a22 78%);box-shadow:0 30px 90px #0005}
+    #scene{position:absolute;inset:0;width:100%;height:100%;display:block}.stage:after{content:"";pointer-events:none;position:absolute;inset:0;background:linear-gradient(90deg,transparent 70%,rgba(5,12,17,.16)),linear-gradient(0deg,rgba(7,13,18,.38),transparent 32%)}
+    .stage-label{position:absolute;z-index:2;left:20px;top:18px;color:#d9e1e6;font-size:10px;letter-spacing:.18em;text-transform:uppercase}.stage-controls{position:absolute;z-index:3;right:16px;bottom:16px;display:flex;gap:8px}.stage-controls button{background:#0e1921d9;color:#e8eef2;border:1px solid #ffffff30;border-radius:4px;padding:9px 12px;font-size:11px;cursor:pointer}.stage-controls button:hover{border-color:var(--accent);color:var(--accent)}.hint{position:absolute;z-index:2;bottom:20px;left:20px;color:#b5c2ca;font-size:11px}
+    .scroll-note{color:#8d9ca6;font-size:11px;margin-top:28px;letter-spacing:.08em}
+    .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#111d25}.strip-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:20px 0;color:#c1cbd1;font-size:12px;letter-spacing:.05em}.strip strong{color:white;font-weight:600}
+    section{padding:96px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:38px}.section-head h2{font-size:clamp(32px,4vw,46px);letter-spacing:-.045em;max-width:650px}.section-head p{color:var(--muted);max-width:400px;margin:0;font-size:14px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.service{background:linear-gradient(145deg,#172630,#121e27);border:1px solid var(--line);border-radius:7px;padding:25px;min-height:205px;transition:.25s}.service:hover{transform:translateY(-4px);border-color:#dca64b80}.num{color:var(--accent);font-size:11px;letter-spacing:.13em}.service h3{font-size:19px;margin:22px 0 10px}.service p{margin:0;color:#aab8c1;font-size:13px;line-height:1.65}.service .arrow{float:right;color:var(--accent);font-size:19px}
+    .process{background:#111d25;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.step{border-top:1px solid #60717c;padding-top:18px}.step b{color:var(--accent);font-size:11px;letter-spacing:.15em}.step h3{font-size:18px;margin:14px 0 9px}.step p{font-size:13px;color:var(--muted);margin:0}
+    .capability{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.capability-visual{min-height:390px;border-radius:8px;overflow:hidden;position:relative;background:radial-gradient(ellipse at 50% 45%,#314653,#172630 65%,#101920);border:1px solid var(--line);display:grid;place-items:center}.blueprint{width:80%;height:auto;opacity:.85}.capability-copy h2{font-size:clamp(32px,4vw,45px);letter-spacing:-.045em;margin:18px 0}.capability-copy p{color:var(--muted);font-size:14px}.ticks{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;margin-top:24px}.ticks span{font-size:13px;color:#d7e0e5}.ticks span:before{content:"↗";color:var(--accent);margin-right:9px}
+    .cta{padding:65px 0;background:linear-gradient(110deg,#263946,#172630);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{font-size:clamp(30px,4vw,43px);max-width:700px;letter-spacing:-.04em}.cta p{color:#bac6cd;margin:12px 0 0;font-size:14px}
+    .contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}.contact h2{font-size:42px;letter-spacing:-.05em;margin:16px 0}.contact p{color:var(--muted);font-size:14px}.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:11px;color:#c3cdd3}.field input,.field textarea{background:#14212b;border:1px solid var(--line);border-radius:4px;color:white;padding:13px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--accent)}.field textarea{min-height:115px;resize:vertical}.contact-form button{border:0;cursor:pointer;justify-self:start}.small{font-size:11px!important;color:#81919b!important}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:#8797a1;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:55px}.stage{height:440px}.hero-copy{max-width:700px}.capability{gap:30px}.nav{gap:15px}}
+    @media(max-width:650px){.wrap{width:min(100% - 32px,var(--max))}.topbar{height:66px}.nav a:not(.nav-cta){display:none}.brand{font-size:16px}.hero{padding:48px 0}.stage{height:340px}.section-head,.cta-inner{display:block}.section-head p{margin-top:16px}.services{grid-template-columns:1fr 1fr}.service{padding:18px;min-height:190px}.steps{grid-template-columns:1fr 1fr}.capability,.contact{grid-template-columns:1fr;gap:28px}.capability-visual{min-height:280px}.contact-form{grid-template-columns:1fr}.field.full{grid-column:auto}.ticks{grid-template-columns:1fr 1fr}section{padding:70px 0}.cta .btn{margin-top:24px}}
+    @media(max-width:400px){.services{grid-template-columns:1fr}.proof{gap:10px}.stage{height:300px}}
+  </style>
+</head>
+<body>
+<header class="wrap topbar">
+  <a class="brand" href="#">CAD<span>ENGINEER</span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#services">Services</a><a href="#approach">Approach</a><a href="#capability">Capabilities</a><a class="nav-cta" href="#contact">Discuss a project ↗</a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="hero-copy">
+      <div class="eyebrow">Independent mechanical engineering support</div>
+      <h1>Ideas engineered.<br><em>Ready to make.</em></h1>
+      <p class="lead">Practical mechanical design and product development for businesses that need to turn an idea, problem or concept into something real — from the first CAD model to prototypes and manufacturing-ready drawings.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Discuss your project ↗</a>
+        <a class="btn btn-secondary" href="#services">Explore capabilities</a>
+      </div>
+      <div class="proof"><span>Mechanical & product design</span><span>CAD & technical drawings</span><span>Prototyping & 3D printing</span></div>
+      <div class="scroll-note">DESIGN · DEVELOP · PROTOTYPE · DELIVER</div>
+    </div>
+    <div class="stage" aria-label="Interactive 3D mechanical assembly">
+      <div class="stage-label">Interactive engineering model / 01</div>
+      <canvas id="scene"></canvas>
+      <div class="hint">Drag to rotate · Scroll to zoom</div>
+      <div class="stage-controls"><button id="explode">Exploded view</button><button id="reset">Reset view</button></div>
+    </div>
+  </div>
+
+  <div class="strip"><div class="wrap strip-inner"><strong>OUTSOURCED DESIGN SUPPORT</strong><span>Concept development</span><span>3D CAD modelling</span><span>Product design</span><span>Prototype development</span><span>Manufacturing documentation</span></div></div>
+
+  <section id="services" class="wrap">
+    <div class="section-head"><h2>Engineering support across the product journey.</h2><p>Bring in focused design resource when you need it — whether you are developing a new product, improving existing equipment or preparing a design for manufacture.</p></div>
+    <div class="services">
+      <article class="service"><span class="num">01 / DESIGN</span><span class="arrow">↗</span><h3>Mechanical Design</h3><p>Machine design, mechanisms, equipment, structures and engineered assemblies developed around function, reliability and practical manufacture.</p></article>
+      <article class="service"><span class="num">02 / PRODUCT</span><span class="arrow">↗</span><h3>Product Design & Development</h3><p>Taking concepts through design development, component selection, assembly definition and design refinement.</p></article>
+      <article class="service"><span class="num">03 / CAD</span><span class="arrow">↗</span><h3>3D CAD Modelling</h3><p>Parametric parts, complex assemblies and design modifications, with clear models that support downstream engineering.</p></article>
+      <article class="service"><span class="num">04 / DOCUMENTATION</span><span class="arrow">↗</span><h3>Technical Drawings</h3><p>Manufacturing and fabrication drawings, assembly drawings, detail drawings, BOMs and supporting documentation.</p></article>
+      <article class="service"><span class="num">05 / PROTOTYPE</span><span class="arrow">↗</span><h3>Prototyping</h3><p>Practical prototype development to evaluate fit, form and function, identify design issues and de-risk the next stage.</p></article>
+      <article class="service"><span class="num">06 / ADDITIVE</span><span class="arrow">↗</span><h3>3D Printing</h3><p>FDM and resin 3D printing for concept models, functional components, fit checks, fixtures and low-volume parts.</p></article>
+    </div>
+  </section>
+
+  <section class="process" id="approach">
+    <div class="wrap">
+      <div class="section-head"><h2>A clear route from brief to build.</h2><p>Structured engineering delivery keeps decisions visible and gives you usable outputs at each stage.</p></div>
+      <div class="steps">
+        <div class="step"><b>01 / UNDERSTAND</b><h3>Define the brief</h3><p>Review the problem, requirements, constraints, interfaces and intended manufacturing route.</p></div>
+        <div class="step"><b>02 / DEVELOP</b><h3>Design the solution</h3><p>Build and refine the CAD, check interfaces and resolve practical design considerations.</p></div>
+        <div class="step"><b>03 / VALIDATE</b><h3>Prototype & review</h3><p>Use prototypes and design reviews to check fit, form and function before committing further.</p></div>
+        <div class="step"><b>04 / RELEASE</b><h3>Prepare to manufacture</h3><p>Issue agreed models, drawings and supporting documentation for the next stage.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="capability" class="wrap">
+    <div class="capability">
+      <div class="capability-visual">
+        <svg class="blueprint" viewBox="0 0 620 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Technical line illustration of a mechanical assembly">
+          <g stroke="#d5a85d" stroke-width="1.5" opacity=".9">
+            <path d="M95 270 310 150 530 270 310 393 95 270Z"/><path d="M95 270v-95l215-122 220 122v95M310 53v97M95 175l215 122 220-122"/>
+            <path d="m180 222 130-74 130 74-130 74-130-74Z"/><path d="M180 222v-54l130-74 130 74v54M310 94v54"/>
+            <path d="M215 202v-54l95-54 95 54v54M215 202l95 54 95-54"/>
+            <path d="M130 290v42l180 102 180-102v-42M310 393v41M70 155 310 18l240 137M60 320l250 142 250-142"/>
+            <path d="M140 115h70m-70 0-8-5m8 5-8 5M480 115h70m-70 0 8-5m-8 5 8 5M310 15v-12m0 12-5-7m5 7 5-7"/>
+          </g>
+          <g fill="#e2a64b" font-family="monospace" font-size="11"><text x="316" y="17">ASSEMBLY / ISO</text><text x="482" y="105">A-A</text><text x="68" y="145">CAD</text><text x="430" y="350">01</text></g>
+          <g stroke="#9db1bd" stroke-width="1" opacity=".45"><path d="M40 370h540M310 5v405" stroke-dasharray="4 6"/></g>
+        </svg>
+      </div>
+      <div class="capability-copy">
+        <div class="eyebrow">One connected workflow</div>
+        <h2>Designed with the next step in mind.</h2>
+        <p>A good CAD model is only part of the job. Design decisions affect assembly, materials, tolerances, production methods and serviceability. The aim is to create engineering outputs that are useful beyond the screen.</p>
+        <div class="ticks"><span>Design for manufacture</span><span>Assembly consideration</span><span>Prototype iteration</span><span>Clear drawing packs</span><span>Fit & interface checks</span><span>Practical problem solving</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta"><div class="wrap cta-inner"><div><h2>Have a design challenge or a product to develop?</h2><p>Share the brief, sketches or existing CAD and start a practical conversation.</p></div><a class="btn btn-primary" href="#contact">Start a project enquiry ↗</a></div></div>
+
+  <section id="contact" class="wrap">
+    <div class="contact">
+      <div><div class="eyebrow">Start a conversation</div><h2>Tell us what you need to make.</h2><p>Outline the project, the stage you are at and the support you need. Include any deadlines or manufacturing constraints that are already known.</p><p class="small">For larger files, arrange a file-transfer link after the initial enquiry.</p></div>
+      <form class="contact-form" id="enquiry">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" required placeholder="Your name"></div>
+        <div class="field"><label for="company">Company</label><input id="company" name="company" placeholder="Company name"></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@company.com"></div>
+        <div class="field"><label for="service">What do you need?</label><input id="service" name="service" placeholder="e.g. CAD, prototype, drawings"></div>
+        <div class="field full"><label for="details">Project outline</label><textarea id="details" name="details" required placeholder="A short description of the project, requirements and timescale..."></textarea></div>
+        <button class="btn btn-primary" type="submit">Prepare enquiry ↗</button>
+             </form>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> CAD ENGINEER. All rights reserved.</span><span>Mechanical design · Product development · Prototyping</span><a href="#top">Back to top ↑</a></div></footer>
+
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}
+</script>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
+
+const canvas=document.querySelector('#scene');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.25;
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(34,1,.1,100);
+camera.position.set(7.5,5.6,9.2);
+const controls=new OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;controls.dampingFactor=.055;controls.target.set(0,1.35,0);
+controls.minDistance=5;controls.maxDistance=16;controls.maxPolarAngle=Math.PI*.48;
+scene.add(new THREE.HemisphereLight(0xc9e3f4,0x26313a,2.0));
+const key=new THREE.DirectionalLight(0xffe0b0,3.2);key.position.set(5,9,6);key.castShadow=true;key.shadow.mapSize.set(2048,2048);scene.add(key);
+const rim=new THREE.DirectionalLight(0x6aa7d0,2.2);rim.position.set(-7,4,-5);scene.add(rim);
+const fill=new THREE.PointLight(0xe2a64b,35,18);fill.position.set(1,4,4);scene.add(fill);
+const mat=(color,metalness=.4,roughness=.35)=>new THREE.MeshStandardMaterial({color,metalness,roughness});
+const steel=mat(0x8799a4,.82,.28),dark=mat(0x26343d,.72,.34),black=mat(0x11191e,.35,.5),gold=mat(0xd99c42,.65,.28),rubber=mat(0x20272b,.05,.78),silver=mat(0xb9c7ce,.85,.22);
+const root=new THREE.Group();scene.add(root);
+function box(parent,name,w,h,d,material,x,y,z){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),material);m.name=name;m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m}
+function cyl(parent,name,r1,r2,len,material,x,y,z,rx=0,ry=0,rz=0,segments=32){const m=new THREE.Mesh(new THREE.CylinderGeometry(r1,r2,len,segments),material);m.name=name;m.position.set(x,y,z);m.rotation.set(rx,ry,rz);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m}
+function rod(parent,a,b,r,material){const dir=new THREE.Vector3().subVectors(b,a);const m=new THREE.Mesh(new THREE.CylinderGeometry(r,r,dir.length(),16),material);m.position.copy(a).add(b).multiplyScalar(.5);m.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),dir.normalize());m.castShadow=true;parent.add(m);return m}
+const frame=new THREE.Group();root.add(frame);
+// Four structural legs and cross members
+for(const x of [-2.15,2.15])for(const z of [-.85,.85]){
+ box(frame,'Frame upright',.16,2.05,.16,steel,x,.98,z);
+ box(frame,'Foot plate',.42,.10,.42,dark,x,.08,z);
+}
+for(const y of [.35,1.72])for(const z of [-.85,.85])box(frame,'Longitudinal rail',4.45,.15,.14,dark,0,y,z);
+for(const y of [.35,1.72])for(const x of [-2.15,2.15])box(frame,'Cross rail',.14,.15,1.7,steel,x,y,0);
+for(const x of [-1.75,1.75])for(const z of [-.85,.85])rod(frame,new THREE.Vector3(x,.55,z),new THREE.Vector3(x+(.4*(x<0?1:-1)),1.5,z),.045,steel);
+// Conveyor bed
+const bed=new THREE.Group();root.add(bed);
+box(bed,'Conveyor bed',4.25,.18,1.55,dark,0,1.83,0);
+box(bed,'Belt surface',4.05,.045,1.30,rubber,0,1.945,0);
+for(const z of [-.78,.78])box(bed,'Side guide',4.15,.22,.09,silver,0,2.03,z);
+for(let i=0;i<9;i++){const x=-1.75+i*.4375;cyl(bed,'Conveyor roller',.105,.105,1.38,silver,x,1.82,0,Math.PI/2);}
+// Drive and motor
+const drive=new THREE.Group();root.add(drive);
+cyl(drive,'Drive drum',.18,.18,1.42,dark,2.1,1.82,0,Math.PI/2);
+box(drive,'Motor housing',.72,.62,.62,dark,2.55,1.05,.15);
+cyl(drive,'Motor end cap',.27,.27,.12,silver,2.93,1.05,.15,0,0,Math.PI/2);
+for(let i=0;i<8;i++){const a=i*Math.PI/4;box(drive,'Motor cooling fin',.08,.42,.09,steel,2.55,1.05+Math.sin(a)*.28,.15+Math.cos(a)*.28);}
+box(drive,'Gearbox',.42,.48,.48,gold,2.12,1.12,.15);
+// Hopper and guard
+const hopper=new THREE.Group();root.add(hopper);
+const hopperTop=box(hopper,'Feed hopper',.95,.55,1.25,steel,-1.45,2.34,0);hopperTop.rotation.z=-.12;
+box(hopper,'Hopper lip',1.05,.08,1.35,gold,-1.45,2.64,0);
+for(const z of [-.7,.7])box(hopper,'Safety guard',1.0,.55,.045,gold,.25,2.32,z);
+// Control cabinet
+const cabinet=new THREE.Group();root.add(cabinet);
+box(cabinet,'Control cabinet',.58,.85,.34,dark,-1.65,1.15,-1.18);
+box(cabinet,'Control panel',.40,.58,.025,black,-1.65,1.18,-1.0);
+cyl(cabinet,'Emergency stop',.075,.075,.08,gold,-1.65,1.37,-.94,Math.PI/2);
+cyl(cabinet,'Indicator',.035,.035,.05,mat(0x53bd91,.1,.2),-1.65,1.18,-.94,Math.PI/2);
+// Ground plane
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(200,200),mat(0x14212a,.1,.85));ground.rotation.x=-Math.PI/2;ground.position.y=.015;ground.receiveShadow=true;scene.add(ground);
+const grid=new THREE.GridHelper(20,40,0x536672,0x30424d);grid.position.y=.025;grid.material.transparent=true;grid.material.opacity=.23;scene.add(grid);
+// exploded movement offsets
+const explodedParts=[{o:hopper,axis:new THREE.Vector3(0,1,0),d:1.0},{o:drive,axis:new THREE.Vector3(1,0,0),d:1.0},{o:bed,axis:new THREE.Vector3(0,1,0),d:.65},{o:cabinet,axis:new THREE.Vector3(-1,0,0),d:.7}];
+let exploded=false;
+document.querySelector('#explode').addEventListener('click',()=>{exploded=!exploded;explodedParts.forEach(p=>p.o.position.copy(exploded?p.axis.clone().multiplyScalar(p.d):new THREE.Vector3()));document.querySelector('#explode').textContent=exploded?'Assembled view':'Exploded view';});
+document.querySelector('#reset').addEventListener('click',()=>{controls.reset();camera.position.set(7.5,5.6,9.2);controls.target.set(0,1.35,0);controls.update();});
+const resize=()=>{const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();};new ResizeObserver(resize).observe(canvas);resize();
+function animate(){requestAnimationFrame(animate);controls.update();renderer.render(scene,camera)}animate();
+// Email form: configure this address before publishing.
+const CONTACT_EMAIL='srtgblsjgsg@dfdf.com';
+document.querySelector('#enquiry').addEventListener('submit',e=>{e.preventDefault();if(CONTACT_EMAIL.startsWith('replace-')){alert('Before publishing, replace CONTACT_EMAIL in index.html with your business email address.');return;}const d=new FormData(e.currentTarget);const subject=encodeURIComponent('Project enquiry — '+(d.get('service')||'CAD Engineer'));const body=encodeURIComponent(`Name: ${d.get('name')}\nCompany: ${d.get('company')}\nEmail: ${d.get('email')}\nService: ${d.get('service')}\n\nProject outline:\n${d.get('details')}`);location.href=`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;});
+document.querySelector('#year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
